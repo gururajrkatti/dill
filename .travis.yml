@@ -39,6 +39,44 @@ matrix:
         - python: 'pypy3'
           dist: xenial
           env:
+ 
+    # Power jobs
+        - python: '2.7'
+          env:
+            - COVERAGE="true"
+          arch: ppc64le
+
+        - python: '3.6'
+          dist: xenial
+          env:
+            - COVERAGE="true"
+            - NUMPY="true"
+          arch: ppc64le
+
+        - python: '3.7'
+          dist: xenial
+          env:
+          arch: ppc64le
+
+        - python: '3.8'
+          dist: xenial
+          env:
+          arch: ppc64le
+
+        - python: '3.9'
+          dist: xenial
+          env:
+          arch: ppc64le
+
+        - python: '3.10-dev'
+          dist: xenial
+          env:
+          arch: ppc64le
+
+        - python: 'nightly'
+          dist: xenial
+          env:
+          arch: ppc64le
 
     allow_failures:
         - python: '3.10-dev'
