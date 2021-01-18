@@ -42,11 +42,12 @@ matrix:
  
     # Power jobs
         - python: '2.7'
+          dist: xenial
           env:
             - COVERAGE="true"
           arch: ppc64le
 
-        - python: '3.6'
+        - python: '3.6.7'  # Specifying the minor version so that assert in tests/test_detect.py is handled
           dist: xenial
           env:
             - COVERAGE="true"
